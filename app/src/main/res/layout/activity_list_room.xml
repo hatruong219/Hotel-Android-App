@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.ListRoomActivity">
+    <androidx.appcompat.widget.Toolbar
+        app:title="Danh sách phòng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#009688"
+        tools:ignore="MissingConstraints"/>
+    <TextView
+        android:background="#FFFFFF"
+        android:id="@+id/listroom_Num"
+        android:textColor="#ED0C0C"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KHÁCH SẠN CÓ 0 LOẠI PHÒNG"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycleview_listroom"
+        tools:listitem="@layout/item_listroom"/>
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.BillOfMe">
+    <androidx.appcompat.widget.Toolbar
+        app:title="Danh sách hóa đơn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#009688"
+        tools:ignore="MissingConstraints"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textColor="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22dp"
+                    android:padding="5dp"
+                    android:text="PHÒNG ĐANG ĐẶT">
+
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:orientation="horizontal"
+                    android:id="@+id/recycleview_bill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:background="#24393737"
+                android:layout_height="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textColor="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22dp"
+                    android:padding="5dp"
+                    android:text="LỊCH SỬ ĐẶT PHÒNG">
+
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:orientation="horizontal"
+                    android:id="@+id/recycleview_listbill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

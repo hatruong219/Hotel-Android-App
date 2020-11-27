@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.BookingActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_adadad"/>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#F80000"
+            android:textSize="20dp"
+            android:text="ĐẶT PHÒNG"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/booking_ImgRoom"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"></ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/booking_NameRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="Tên phòng"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/booking_StarRoom"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="#FFEB3B"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:progressTint="#FFEB3B"
+                        android:rating="0"
+                        android:secondaryProgressTint="#FFEB3B"
+                        android:stepSize="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_sl" />
+
+                    <TextView
+                        android:id="@+id/booking_KindRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loại phòng"
+                        android:textColor="#000000"
+                        android:textSize="16dp"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/booking_PriceRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:gravity="bottom"
+                android:text="Giá phòng"
+                android:textColor="#E91E1E"
+                android:textSize="16dp"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Ngày đặt phòng :"/>
+            <TextView
+                android:id="@+id/bookingDatein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Chưa chọn ngày"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Số ngày thuê:"/>
+            <EditText
+                android:id="@+id/bookingDateout"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="#000000"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/booking_EmptyRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#151111"
+            android:text="Có 0 phòng trống"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <Button
+                android:id="@+id/bookingSub"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="-"/>
+            <TextView
+                android:id="@+id/bookingNum"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="#E91E1E"
+                android:textSize="16dp"
+                android:gravity="center"/>
+            <Button
+                android:id="@+id/bookingAdd"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="+"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnaddbill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/buttonlike"
+        android:padding="20dp"
+        android:text="Xác nhận đặt phòng" />
+</LinearLayout>

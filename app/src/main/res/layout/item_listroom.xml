@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/listroom_ImgRoom"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"></ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/listroom_NameRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="Tên phòng"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/listroom_StarRoom"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="#FFEB3B"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:progressTint="#FFEB3B"
+                        android:rating="0"
+                        android:secondaryProgressTint="#FFEB3B"
+                        android:stepSize="1" />
+
+                    <TextView
+                        android:id="@+id/listroom_Comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="#3F51B5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_sl" />
+
+                    <TextView
+                        android:id="@+id/listroom_KindRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loại phòng"
+                        android:textColor="#000000"
+                        android:textSize="16dp"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/listroom_PriceRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:gravity="bottom"
+                android:text="Giá phòng"
+                android:textColor="#E91E1E"
+                android:textSize="16dp"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
